@@ -11,6 +11,7 @@ class LandingController extends Controller
     public function welcome() {
         $totalNumberOfGuesses = 6;
         $numberOfLetters = 5;
-        return Inertia::render("Welcome", compact('totalNumberOfGuesses', 'numberOfLetters'));
+        $currentGuess = 1;
+        return Inertia::render("Welcome", compact('totalNumberOfGuesses', 'numberOfLetters', 'currentGuess'));
     }
 }
